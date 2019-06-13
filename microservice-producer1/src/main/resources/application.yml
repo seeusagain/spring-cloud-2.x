@@ -1,0 +1,19 @@
+server:
+  port: 8234
+
+spring:
+  application:
+    name: microservice-producer1
+
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 5 #eureka client发送心跳给server端的频率（默认30秒）
+    lease-expiration-duration-in-seconds: 10 #eureka client发送心跳给server端后，续约到期时间（默认90秒）
+    preferIpAddress: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    serviceUrl:
+      defaultZone:  http://localhost:8181/eureka/
+
+logging:
+  config: classpath:logback-spring.xml
