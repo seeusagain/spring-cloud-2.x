@@ -1,8 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
 .gitignore
 .idea/
-spring-cloud.iml
-/spring-cloud.iml
+spring-cloud-2.x.iml
 common/target/generated-sources/
 microservice-eureka/target/generated-sources/
 common/common.iml
