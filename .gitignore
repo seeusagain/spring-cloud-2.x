@@ -8,9 +8,10 @@ microservice-eureka/target/generated-sources/
 common/common.iml
 common/target/
 microservice-eureka/microservice-eureka.iml
+microservice-eureka/target/
 microservice-gateway/microservice-gateway.iml
 microservice-gateway/target/
 microservice-producer1/microservice-producer1.iml
 microservice-producer1/target/
-microservice-producer2/target/
 microservice-producer2/microservice-producer2.iml
+microservice-producer2/target/
