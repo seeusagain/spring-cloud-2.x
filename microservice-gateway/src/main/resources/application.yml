@@ -12,6 +12,26 @@ spring:
           enabled: true
           #          这里吧上面访问服务的SERVICE_APPLICETION_NAME改为小写
           lower-case-service-id: true
+      #      默认路由交给hystrix，提供熔断功能
+      default-filters:
+        - name: Hystrix
+          args:
+            name: fallbackcmd
+            #   熔断后降级接口
+            fallbackUri: forward:/fallback
+
+
+#设置hystrix熔断时间，默认1000ms
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: THREAD
+          thread:
+            timeoutInMilliseconds: 1500
+
+
 
 eureka:
   instance:
