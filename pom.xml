@@ -35,7 +35,7 @@
     <module>microservice-gateway</module>
     <module>microservice-producer1</module>
     <module>microservice-producer2</module>
-    <module>microservice-web</module>
+    <module>microservice-docker</module>
   </modules>
 
   <dependencyManagement>
