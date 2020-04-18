@@ -20,8 +20,9 @@ public class QuartzService {
      */
     @Scheduled(cron = "*/5 * * * * ?")
     public void test() {
-        LOG.info("这是一个info级别的日志:{} ", sdf.format(new Date()));
-        LOG.error("这是一个info级别的日志:{} ", sdf.format(new Date()));
+        String dateStr = sdf.format(new Date());
+        LOG.info("这是一个info级别的日志:{} ", dateStr);
+        LOG.error("这是一个ERROR级别的日志:{} ", dateStr);
     }
 
 }
