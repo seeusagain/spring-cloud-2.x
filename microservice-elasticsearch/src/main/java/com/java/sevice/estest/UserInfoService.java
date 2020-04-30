@@ -16,22 +16,37 @@ public class UserInfoService {
     @Autowired
     private UserInfoRepo userInfoRepo;
 
+    private static final List<String> TEST_LIST;
+
+    static {
+        TEST_LIST = new ArrayList<>();
+        TEST_LIST.add("芦叶满汀洲");
+        TEST_LIST.add("寒沙带浅流");
+        TEST_LIST.add("二十年重过南楼");
+        TEST_LIST.add("叶下系船尤未稳，能几日，又中秋");
+        TEST_LIST.add("黄鹤断矶头");
+        TEST_LIST.add("故人曾到否");
+        TEST_LIST.add("旧江山浑是新惆");
+        TEST_LIST.add("欲买桂花同载酒，终不似，少年游");
+
+        TEST_LIST.add("where there is a river,there is a city");
+        TEST_LIST.add("there is a city");
+        TEST_LIST.add("i don't love city,i love countryside");
+    }
+
     /**
      * 每隔五秒日志一把
      *
      * @throws InterruptedException
      */
     public void addToEs() {
-        for (int i = 0; i < 100; i++) {
-            List<UserInfoDTO> users = new ArrayList<>();
-            for (int j = 0; j < 10; j++) {
-                UserInfoDTO userInfoDTO = new UserInfoDTO(IdGeneratorUtils.getSerialNo(),
-                        "名称" + i + j, "nikeName" + i + j, "i love dog");
-                users.add(userInfoDTO);
-            }
-            this.userInfoRepo.saveAll(users);
-            LOG.info("单词添加成功 " + i);
-        }
+        List<UserInfoDTO> users = new ArrayList<>();
+        TEST_LIST.stream().forEach(item -> {
+            UserInfoDTO userInfoDTO = new UserInfoDTO(IdGeneratorUtils.getSerialNo(), "name", "nikeName", item);
+            users.add(userInfoDTO);
+
+        });
+        this.userInfoRepo.saveAll(users);
     }
 
 }

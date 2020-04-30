@@ -15,7 +15,7 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
  * index相当于db
  * type相当于table
  */
-@Document(indexName = "basic_index",type = "user_info", shards = 3, replicas = 2)
+@Document(indexName = "basic_index", shards = 2, replicas = 1)
 public class UserInfoDTO {
 
     @Id
@@ -27,6 +27,13 @@ public class UserInfoDTO {
     @Field(type = FieldType.Keyword)
     private String nikeName;
 
+    /**
+     * ik_max_word
+     * 会将文本做最细粒度的拆分，比如会将“中华人民共和国人民大会堂”拆分为“中华人民共和国、中华人民、中华、华人、人民共和国、人民、共和国、大会堂、大会、会堂等词语。
+     *
+     * ik_smart
+     * 会做最粗粒度的拆分，比如会将“中华人民共和国人民大会堂”拆分为中华人民共和国、人民大会堂。
+     */
     @Field(type = FieldType.Text, analyzer = "ik_max_word")
     private String remarks;
 }
