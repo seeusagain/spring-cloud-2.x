@@ -1,0 +1,12 @@
+server:
+  port: 8181
+
+spring:
+  application:
+    name: microservice-web
+  elasticsearch:
+    rest:
+      uris: http://192.168.0.1:9200
+
+logging:
+  config: classpath:logback-spring.xml

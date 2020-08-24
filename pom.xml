@@ -13,7 +13,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.1.4.RELEASE</version>
+    <version>2.2.1.RELEASE</version>
   </parent>
 
   <!--阿里云maven 私服-->
@@ -35,6 +35,9 @@
     <module>microservice-gateway</module>
     <module>microservice-producer1</module>
     <module>microservice-producer2</module>
+    <module>microservice-web</module>
+    <module>microservice-basic</module>
+    <module>microservice-elasticSearch</module>
   </modules>
 
   <dependencyManagement>

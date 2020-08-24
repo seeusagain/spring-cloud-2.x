@@ -1,0 +1,9 @@
+server:
+  port: 8182
+
+spring:
+  application:
+    name: microservice-basic
+
+logging:
+  config: classpath:logback-spring.xml
