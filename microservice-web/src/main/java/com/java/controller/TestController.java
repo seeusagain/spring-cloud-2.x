@@ -17,16 +17,10 @@ import org.springframework.web.servlet.ModelAndView;
 @Api(tags = "提供测试接口")
 public class TestController {
 
-  @ApiOperation(value = "提供测试界面", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-  @GetMapping(value = "/index")
-  public Object def() {
-    return new ModelAndView("index");
-  }
-
 
   @ApiOperation(value = "提供测试接口", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
   @GetMapping(value = "/")
-  public Object msg() {
-    return ResultMsg.ok("欢迎访问WEB接口");
+  public Object def() {
+    return new ModelAndView("index");
   }
 }

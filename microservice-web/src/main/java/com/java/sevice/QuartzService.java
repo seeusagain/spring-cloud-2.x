@@ -12,17 +12,17 @@ import java.util.Date;
 public class QuartzService {
     private final Logger LOG = LoggerFactory.getLogger(this.getClass());
     private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-
-    /**
-     * 每隔五秒日志一把
-     *
-     * @throws InterruptedException
-     */
-    @Scheduled(cron = "*/5 * * * * ?")
-    public void test() {
-        String dateStr = sdf.format(new Date());
-        LOG.info("这是一个info级别的日志:{} ", dateStr);
-        LOG.error("这是一个ERROR级别的日志:{} ", dateStr);
-    }
+//
+//    /**
+//     * 每隔五秒日志一把
+//     *
+//     * @throws InterruptedException
+//     */
+//    @Scheduled(cron = "*/5 * * * * ?")
+//    public void test() {
+//        String dateStr = sdf.format(new Date());
+//        LOG.info("这是一个info级别的日志:{} ", dateStr);
+//        LOG.error("这是一个ERROR级别的日志:{} ", dateStr);
+//    }
 
 }

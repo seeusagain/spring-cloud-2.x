@@ -14,3 +14,4 @@ microservice-producer1/microservice-producer1.iml
 microservice-producer1/target/
 microservice-producer2/microservice-producer2.iml
 microservice-producer2/target/
+/microservice-web/microservice-web.iml
