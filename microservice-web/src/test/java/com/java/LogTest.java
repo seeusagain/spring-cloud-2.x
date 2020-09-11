@@ -15,10 +15,7 @@ public class LogTest {
 
     @Test
     public void test() throws Exception {
-        for (int i = 0; i < 10; i++) {
-            LOG.info("定时输出日志:{} ", i);
-            Thread.sleep(200);
-        }
+
     }
 
 }

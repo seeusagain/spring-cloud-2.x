@@ -28,4 +28,14 @@ public class TestController {
     public Object test() {
         return ResultMsg.ok("test ok");
     }
+
+
+    @GetMapping(value = "/testEndlessLoop")
+    public Object testEndlessLoop() {
+        while (true) {
+            int a = 10 * 10 * 10 / 10;
+            System.out.println(a);
+        }
+    }
+
 }
