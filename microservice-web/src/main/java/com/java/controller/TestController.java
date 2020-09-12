@@ -33,4 +33,10 @@ public class TestController {
         return ResultMsg.ok("test ok");
     }
 
+
+    @GetMapping(value = "/sleepAndRun")
+    public Object sleepAndRun() throws Exception {
+        testService.sleepAndRun();
+        return "game over";
+    }
 }
