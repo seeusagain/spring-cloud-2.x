@@ -12,6 +12,7 @@ public class TestService {
             int a = 1 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2;
             System.out.println("正在计算：" + a);
             Thread.sleep(10);
+            i++;
         }
     }
 }
